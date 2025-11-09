@@ -1,0 +1,22 @@
+{
+  "name": "Community",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the community"
+    },
+    "description": {
+      "type": "string",
+      "description": "A brief description of the community's purpose"
+    },
+    "cover_image_url": {
+      "type": "string",
+      "description": "URL for a cover image for the community"
+    }
+  },
+  "required": [
+    "name",
+    "description"
+  ]
+}

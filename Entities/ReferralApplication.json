@@ -1,0 +1,41 @@
+{
+  "name": "ReferralApplication",
+  "type": "object",
+  "properties": {
+    "opportunity_id": {
+      "type": "string",
+      "description": "ID of the referral opportunity"
+    },
+    "applicant_id": {
+      "type": "string",
+      "description": "ID of the student applying"
+    },
+    "resume_url": {
+      "type": "string",
+      "description": "URL of uploaded resume"
+    },
+    "cover_note": {
+      "type": "string",
+      "description": "Short note from applicant explaining their interest"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending",
+      "description": "Current application status"
+    },
+    "reviewer_notes": {
+      "type": "string",
+      "description": "Notes from the alumni reviewer"
+    }
+  },
+  "required": [
+    "opportunity_id",
+    "applicant_id",
+    "cover_note"
+  ]
+}

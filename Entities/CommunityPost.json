@@ -1,0 +1,63 @@
+{
+  "name": "CommunityPost",
+  "type": "object",
+  "properties": {
+    "community_id": {
+      "type": "string",
+      "description": "ID of the community this post belongs to"
+    },
+    "author_id": {
+      "type": "string",
+      "description": "ID of the post author"
+    },
+    "title": {
+      "type": "string",
+      "description": "Post title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Post content/body"
+    },
+    "opportunity_id": {
+      "type": "string",
+      "description": "Optional: ID of a linked referral opportunity"
+    },
+    "post_type": {
+      "type": "string",
+      "enum": [
+        "Career Journey",
+        "Success Story",
+        "Tips & Advice",
+        "Industry Update",
+        "General",
+        "Opportunity"
+      ],
+      "default": "General",
+      "description": "Type of community post"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Relevant tags for the post"
+    },
+    "likes_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of likes"
+    },
+    "comments_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of comments"
+    }
+  },
+  "required": [
+    "community_id",
+    "author_id",
+    "title",
+    "content",
+    "post_type"
+  ]
+}

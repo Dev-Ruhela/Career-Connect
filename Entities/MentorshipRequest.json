@@ -1,0 +1,42 @@
+{
+  "name": "MentorshipRequest",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "ID of the student requesting mentorship"
+    },
+    "mentor_id": {
+      "type": "string",
+      "description": "ID of the potential mentor"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Domain for which mentorship is requested"
+    },
+    "message": {
+      "type": "string",
+      "description": "Personal message from student to mentor"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected"
+      ],
+      "default": "pending",
+      "description": "Current status of the mentorship request"
+    },
+    "goals": {
+      "type": "string",
+      "description": "Student's learning goals and expectations"
+    }
+  },
+  "required": [
+    "student_id",
+    "mentor_id",
+    "domain",
+    "message"
+  ]
+}

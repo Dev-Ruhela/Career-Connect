@@ -1,0 +1,39 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "mentorship_request_id": {
+      "type": "string",
+      "description": "ID of the corresponding mentorship request"
+    },
+    "sender_id": {
+      "type": "string",
+      "description": "ID of the message sender"
+    },
+    "receiver_id": {
+      "type": "string",
+      "description": "ID of the message receiver"
+    },
+    "content": {
+      "type": "string",
+      "description": "The text content of the message"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of an attached file (optional)"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Name of the attached file (optional)"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "mentorship_request_id",
+    "sender_id",
+    "receiver_id"
+  ]
+}

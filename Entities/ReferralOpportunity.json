@@ -1,0 +1,65 @@
+{
+  "name": "ReferralOpportunity",
+  "type": "object",
+  "properties": {
+    "posted_by": {
+      "type": "string",
+      "description": "ID of alumni who posted the opportunity"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Name of the hiring company"
+    },
+    "position": {
+      "type": "string",
+      "description": "Job/internship position title"
+    },
+    "job_type": {
+      "type": "string",
+      "enum": [
+        "Full-time",
+        "Internship",
+        "Part-time",
+        "Contract"
+      ],
+      "description": "Type of opportunity"
+    },
+    "location": {
+      "type": "string",
+      "description": "Job location"
+    },
+    "required_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Required skills and qualifications"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed job description"
+    },
+    "salary_range": {
+      "type": "string",
+      "description": "Salary or stipend range"
+    },
+    "application_deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "Last date to apply"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the opportunity is still available"
+    }
+  },
+  "required": [
+    "posted_by",
+    "company_name",
+    "position",
+    "job_type",
+    "required_skills",
+    "description"
+  ]
+}

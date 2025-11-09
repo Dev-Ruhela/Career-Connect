@@ -1,0 +1,63 @@
+{
+  "name": "CareerResource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Resource title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the resource"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Resume Templates",
+        "Interview Prep",
+        "DSA Practice",
+        "System Design",
+        "HR Tips",
+        "Coding Practice",
+        "Career Guidance",
+        "Other"
+      ],
+      "description": "Resource category"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Document",
+        "Link",
+        "Video",
+        "Guide"
+      ],
+      "description": "Type of resource"
+    },
+    "content_url": {
+      "type": "string",
+      "description": "URL to the resource content"
+    },
+    "uploaded_by": {
+      "type": "string",
+      "description": "ID of user who uploaded the resource"
+    },
+    "likes_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of likes received"
+    },
+    "is_approved": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether resource is approved for sharing"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category",
+    "type",
+    "uploaded_by"
+  ]
+}
